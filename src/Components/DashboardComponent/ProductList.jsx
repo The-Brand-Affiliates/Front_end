@@ -6,7 +6,7 @@ import data from '../../temp_data.json';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// import axios from 'axios';
+import axios from 'axios';
 
 
 function Body(){
@@ -45,10 +45,11 @@ function Body(){
 
     
     <div className="container-l m-3 border rounded-3" id='blur'>
-    
+    <div className="table-wrapper">
+
     <table className="table">
     <thead className='thead'>
-
+    
       <div className="filter">
       </div>
          <tr>
@@ -62,21 +63,20 @@ function Body(){
             </select>
             </th>
             <th scope="col">Offer Expiry</th>
-            <th scope="col"> Comission(%)</th>
+            <th scope="col"> Commission(%)</th>
             <th scope="col"> Orders </th>
             <th scope="col"> Acos</th>
             <th scope="col"> Comission Spent</th>
             <th scope="col"> Salse </th>
-
-            <th scope="col">?</th>
+            <th scope="col"></th>
          </tr>
     </thead>
 
-  <tbody className='table-borderless text-align-center'>
+  <tbody className='table-borderless'>
     
     {Details.map((Detail) => (
-
-    <tr>
+      
+      <tr>
       <td> <input type="checkbox"/></td>
       <th scope="row"><Link className='productName' to={Detail.product_link}>{Detail.name}</Link></th>
       <td>{Detail.status}</td>
@@ -90,11 +90,9 @@ function Body(){
     </tr>
     ))}
 
-    
-
-  </tbody>
-  
+  </tbody> 
 </table>
+</div>
 
 </div>
     </>

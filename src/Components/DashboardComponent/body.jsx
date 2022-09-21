@@ -18,7 +18,7 @@ function Body(){
     return <>
     {Statics.map((Stat) => (
         <div className="container" id='blur1'>
-        <div className="row row-cols-md-3 g-2 stamps">
+        <div className="row row-cols-md-2 g-2 stamps">
 
            <div className="col card1 navbar">
                <div className="num">

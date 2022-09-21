@@ -25,7 +25,19 @@ tr:nth-child(even) {
 }
 
 .thead{
-    
+    align-items: center;
+    vertical-align: middle;
+}
+.table{
+    min-width: max-content;
+}
+th, td, tr{
+    margin: 20px;
+}
+
+.table-wrapper{
+    overflow-y: scroll;
+    max-height: 50%;
 }
 
 .container-l#blur.active{
@@ -126,7 +138,7 @@ li:hover{
 /* body.jsx css */
 
 .card1{
-    width: 465px;
+    width: 30%;
     background-color: #FFFFFF;
     padding: 10px;
     height: 100px;
@@ -138,15 +150,13 @@ li:hover{
 }
 
 .container{
-    margin: 10px;
-   margin-left: 50px;
-    padding: 0;
-    width: 100vw;
-    align-items: center;
+    padding: 10px;
 }
 
 .stamps{
-    width: 116%;
+    align-items: center;
+    align-content: center;
+    padding-left: 2%;
 }
 
 .num{
