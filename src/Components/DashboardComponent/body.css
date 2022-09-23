@@ -20,6 +20,24 @@
 tr:nth-child(even) {
     background-color: #EBEBEB;
 }
+tr,td{
+    vertical-align: super;
+}
+#s{
+    
+    margin-inline:15px ;
+}
+.t-ele{
+    margin: 10px;
+    margin-inline: 10px;
+}
+.tr-ele{
+    margin: 7px;
+}
+tr,th,td {
+    padding: 0.8rem, 0.8rem;
+}
+
 .filter{
     padding: 20px;
 }
@@ -30,11 +48,12 @@ tr:nth-child(even) {
 }
 .table{
     min-width: max-content;
+    text-align: center;
 }
-th, td, tr{
-    margin: 20px;
+.initial{
+    text-align: initial;
+    max-width: 600px;
 }
-
 .table-wrapper{
     overflow-y: scroll;
     max-height: 50%;
@@ -50,34 +69,14 @@ th, td, tr{
 .status{
     width: 120px;
     border-radius: 5px;
-    padding: 2px;
-    
+    padding: 2px;  
 }
+
 
 .productName{
     max-width: 500px;
     text-decoration: none;
     color: black;
-}
-
-.pop{
-    width: 600px;
-    height: 325px;
-    background-color: #ebebebf8;
-    text-align: center;
-    align-items: center;
-    position: absolute;
-    top: 250px;
-    left: 500px;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.5s;
-    box-shadow: 1px 1px 1px 1px rgba(60, 58, 58, 0.216);
-}
-
-.pop#popup.active{
-    visibility: visible;
-    opacity: 1;
 }
 
 
@@ -164,3 +163,82 @@ li:hover{
     margin-left: 0px;
 }
 
+
+
+
+
+/* popup-css */
+
+.pop{
+    min-width: 650px;
+    min-height: 400px;
+    width: 50%;
+    background-color: #FFFFFF;
+    /* text-align: center; */
+    /* align-items: center; */
+     position: absolute;
+    top: 30%;
+    left: 25%; 
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.8s;
+    box-shadow: 0.5px 0.5px 3px 3px rgba(83, 82, 82, 0.044);
+    padding: 15px;
+    padding-inline: 3%;
+    border-radius: 5px;
+    
+}
+
+.pop#popup.active{
+    visibility: visible;
+    opacity: 2;
+    z-index: 2;
+}
+
+.font-s{
+    font-size: 22px;
+}
+
+.font-d{
+    font-size: 18px;
+    max-width: 70%;
+    color: #3C537E;
+}
+
+.sav{
+    background-color: #119070;
+    margin-inline-start: 15px;
+    min-width: 50px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    width: 60px;
+    height: 30px;
+}
+
+.datebar{
+    min-width: 190px;
+    width: 68%;
+    padding: 3px;
+    padding-inline-start: 15px;
+    border-radius: 5px;
+    background-color: #DEDEDE;
+    color: #3C537E;
+}
+
+.clo{
+    text-align: center;
+    margin-top: 10%;
+}
+.close{
+    min-width: 190px;
+    width: 33%;
+    border-radius: 5px;
+    background-color: #4793EC;
+    color: #FFFFFF;
+    height: 30px;
+}
+
+.tittle{
+    text-align: center;
+    font-weight: bold;
+}

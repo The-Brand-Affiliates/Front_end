@@ -47,28 +47,28 @@ function Body(){
     <div className="container-l m-3 border rounded-3" id='blur'>
     <div className="table-wrapper">
 
-    <table className="table">
-    <thead className='thead'>
+    <table className="table p-2">
+    <thead className='thead p-2'>
     
       <div className="filter">
       </div>
          <tr>
-            <th className="col"> <input type="checkbox" /> </th>
-            <th scope="col">Product</th>
+            <th className="col" > <input type="checkbox" /> </th>
+            <th scope="col" className='initial' >Product</th>
             <th scope="col"> 
             <select className='status' name="Status" id="s" >
-              <option value="1">all</option>
-              <option value="2">running</option>
+              <option value="1">Status: &ensp;all</option>
+              <option value="2">Active</option>
               <option value="3">expired</option>
             </select>
             </th>
-            <th scope="col">Offer Expiry</th>
-            <th scope="col"> Commission(%)</th>
-            <th scope="col"> Orders </th>
-            <th scope="col"> Acos</th>
-            <th scope="col"> Comission Spent</th>
-            <th scope="col"> Salse </th>
-            <th scope="col"></th>
+            <th scope="col" > <div className="t-ele">Offer Expiry </div> </th>
+            <th scope="col" ><div className="t-ele">Commission</div> </th>
+            <th scope="col" > <div className="t-ele">orders</div> </th>
+            <th scope="col" > <div className="t-ele">Acos</div> </th>
+            <th scope="col" > <div className="t-ele">Commission Spent</div></th>
+            <th scope="col" > <div className="t-ele">Sales</div></th>
+            <th scope="col" ></th>
          </tr>
     </thead>
 
@@ -77,16 +77,16 @@ function Body(){
     {Details.map((Detail) => (
       
       <tr>
-      <td> <input type="checkbox"/></td>
-      <th scope="row"><Link className='productName' to={Detail.product_link}>{Detail.name}</Link></th>
-      <td>{Detail.status}</td>
-      <td>{Detail['expiry_date']}</td>
-      <td>{Detail.commission}%</td>
-      <td>{Detail.orders}</td>
-      <td>{Detail.acos}</td>
-      <td>{Detail['spend']}</td>
-      <td>{Detail.sales}</td>
-      <td><Link to="" onClick={toggle}>edit</Link></td>
+      <td > <input type="checkbox"/></td>
+      <th scope="row" className='initial'><Link className='productName' to={Detail.product_link}>{Detail.name}</Link></th>
+      <td > <div className="tr-ele">{Detail.status} </div> </td>
+      <td ><div className="tr-ele"> {Detail['expiry_date']} </div> </td>
+      <td ><div className="tr-ele">  {Detail.commission}% </div> </td>
+      <td ><div className="tr-ele"> {Detail.orders} </div> </td>
+      <td ><div className="tr-ele"> {Detail.acos} </div> </td>
+      <td ><div className="tr-ele">{Detail['spend']} </div> </td>
+      <td ><div className="tr-ele">  {Detail.sales} </div></td>
+      <td ><div className="tr-ele"> <Link to="" onClick={toggle}>edit</Link></div> </td>
     </tr>
     ))}
 

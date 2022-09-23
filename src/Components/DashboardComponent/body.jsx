@@ -8,6 +8,7 @@ import slice3 from '../../img/Slice 3.svg'
 import slice2 from '../../img/Slice 2.svg'
 import slice1 from '../../img/Slice 1.svg'
 import stats from '../../Brand_statics.json'
+import Pop from './Popup'
 import { useState } from 'react';
 
 
@@ -86,6 +87,7 @@ function Body(){
    </div>
     ))}
     
+    <Pop></Pop>
     </>
     
 }
