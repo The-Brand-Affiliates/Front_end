@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "../DashboardComponent/body.css"
 import img from '../../img/image.png'
 import { useState} from 'react';
+import { Link } from 'react-router-dom';
 import Avatar from 'react-avatar-edit';
 
 
@@ -33,10 +34,10 @@ function Sidebar(){
             
             <ul className="list-unstyled components">
             <li className="">
-            <a href="/profile/basicdetail"className="btn-1 nav-link">Basic Details</a>
+            <Link to="/profile"className="btn-1 nav-link">Basic Details</Link>
             </li>
             <li>
-            <a href="/profile/wallet" className='btn-1 nav-link'>Wallet</a>
+            <Link to="/profile/wallet"className="btn-1 nav-link">Wallet</Link>
             </li>
             <li>
             <a href="/profile/Thistory"className="btn-1 nav-link">Transaction History</a>

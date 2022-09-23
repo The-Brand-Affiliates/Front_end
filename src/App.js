@@ -4,6 +4,10 @@ import Navbar from './Components/Navbar.jsx'
 import Dashboard from './Components/Dashboard.jsx';
 import Profile from './Components/Profile'
 import Contactus from './Components/Contactus'
+import Basicdetails from './Components/ProfileComponent/Basicdetails'
+import Wallet from './Components/ProfileComponent/Wallet'
+import Transaction from './Components/ProfileComponent/Transactions'
+import Bank from './Components/ProfileComponent/Bank'
 
 function App(){
     return (
@@ -11,7 +15,10 @@ function App(){
             <Navbar/>
             <Routes>
                 <Route path ="/" element = {<Dashboard/>}/>
-                <Route path ="/profile" element = {<Profile/>}/>
+                <Route path ="/profile" element = {<><Profile/> <Basicdetails/></>}> </Route>
+                <Route path ="/profile/wallet" element = {<><Profile/> <Wallet/></>}/>
+                <Route path ="/profile/Thistory" element = {<><Profile/> <Transaction/></>}/>
+                <Route path ="/profile/Bankdetail" element = {<><Profile/> <Bank/></>}/>
                 <Route path ="/contact" element = {<Contactus/>}/>
             </Routes>
             
