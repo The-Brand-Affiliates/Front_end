@@ -31,6 +31,11 @@ function Popup(){
       // }
       // )
 
+      function myfunction() {
+        var date;
+          date = document.getElementById("myid").value;
+          console.log(date);
+        }
     return(
         <>
         {Details.map((Detail)=>(
@@ -44,12 +49,12 @@ function Popup(){
         <div className="dc d-flex navbar">
             <div className="end">
                 <p className="font-s">Offer Ends on</p>
-                <input className ="datebar" type="date" />
-                <button className="sav" >save</button>
+                <input className ="datebar" id='myid' type="date" />
+                <button className="sav" onClick={myfunction}>save</button>
             </div>
             <div className="commision">
                 <p className="font-s">Commission (%)</p>
-                <input className="datebar" type="date" />
+                <input className="datebar" type="number" />
                 <button className="sav" >save</button>
             </div>
         </div>
