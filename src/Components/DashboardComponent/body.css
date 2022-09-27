@@ -7,6 +7,9 @@
     margin: 6px 0px 3px 3px ;
     height: 100vh;
 } */
+*{
+    font-family: 'Poppins', sans-serif;
+}
 
 .nav-txt{
    font-weight: bold;
@@ -33,6 +36,7 @@ tr,td{
 }
 .tr-ele{
     margin: 7px;
+    color: #3C537E;
 }
 tr,th,td {
     padding: 0.8rem, 0.8rem;
@@ -49,6 +53,7 @@ tr,th,td {
 .table{
     min-width: max-content;
     text-align: center;
+    
 }
 .initial{
     text-align: initial;
@@ -76,7 +81,7 @@ tr,th,td {
 .productName{
     max-width: 500px;
     text-decoration: none;
-    color: black;
+    color: #3C537E;
 }
 
 

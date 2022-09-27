@@ -10,12 +10,19 @@
     align-items: center;
     margin-top: 20px;
     margin-right: 4%;
+
+}
+.col{
+    margin-bottom: 32px;
 }
 
 .tittle{
     margin-bottom: 5px;
     margin-top: 10px;
     margin-left: 10px;
+    text-align: start;
+    color: #999999;
+    font-weight: 600;
 }
 
 .form-control{
@@ -80,3 +87,38 @@
     text-align: center;
     align-items: center;
 }
+
+
+/* Transaction details  */
+
+.transdiv{
+    width: 45%;
+    background-color: #EBEBEB;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 25px;
+}
+
+.td{
+    color: #333333;
+    font-size: 18px;
+    
+}
+.tid{
+    color: #5F5F5F;
+    font-size: 10px;
+    margin: 0%;
+}
+
+.statusdate{
+    color: #333333;
+    font-size: 10px;
+    margin: 0;
+}
+
+.float-left{
+    font-size: 18px;
+    
+    
+}
+
