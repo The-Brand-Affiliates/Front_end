@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 import Avatar from 'react-avatar-edit';
 
 
+
+
 function Sidebar(){
 
     const[dialogs, setDialogs] = useState(false);
@@ -32,11 +34,11 @@ function Sidebar(){
                     />
                 </a>
             
-            <ul className="list-unstyled components">
+            <ul className="list-unstyled components side-sec1">
             <li className="">
-            <Link to="/profile"className="btn-1 nav-link">Basic Details</Link>
+            <Link to="/profile"className="btn-1 nav-link side-sec">Basic Details</Link>
             </li>
-            <li>
+            {/* <li>
             <Link to="/profile/wallet"className="btn-1 nav-link">Wallet</Link>
             </li>
             <li>
@@ -44,7 +46,7 @@ function Sidebar(){
             </li>
             <li>
             <a href="/profile/bankDetail" className= 'btn-1 nav-link'>Bank Details</a>
-            </li>
+            </li> */}
             </ul>
             </div>
     </nav>

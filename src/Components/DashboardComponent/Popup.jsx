@@ -2,6 +2,8 @@ import React from "react";
 import './body.css';
 import data from '../../temp_data.json';
 import { useState } from "react";
+import image from '../../img/productimg.png';
+
 function Popup(){
     function toggle(){
         var blur = document.getElementById('blur');
@@ -45,6 +47,9 @@ function Popup(){
             <p className="font-s">Edit Details</p>
         </div>
         <p className="font-s">Product</p>
+        <div className="productImg">
+            <img className="Pimg" src={image} alt="product Image" />
+        </div>
         <p className="font-d">{Detail.name}</p>
         <div className="dc d-flex navbar">
             <div className="end">
@@ -58,9 +63,9 @@ function Popup(){
                 <button className="sav" >save</button>
             </div>
         </div>
+        
         <div className="clo">
-
-        <button className="close" onClick={toggle}>Close</button>
+            <button className="close" onClick={toggle}>Close</button>
         </div>
         </div>
         ))}

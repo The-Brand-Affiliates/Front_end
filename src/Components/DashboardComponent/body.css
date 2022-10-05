@@ -137,6 +137,19 @@ li:hover{
     margin-top: 0px;
   
 }
+.editb{
+    text-decoration: none;
+    border: 0;
+    padding-inline: 10px;
+    background-color: #4793EC;
+    border-radius: 4px;
+    width: 100px;
+}
+.editb2{
+    color: #EBEBEB;
+    text-decoration: none;
+    font-size: 15px;
+}
 
 
 /* body.jsx css */
@@ -246,4 +259,25 @@ li:hover{
 .tittle{
     text-align: center;
     font-weight: bold;
+}
+.productImg{
+    float: right;
+    margin-top: -64px;
+}
+.Pimg{
+    height: 160px;
+}
+
+
+/* Sidebar CSS */
+
+.side-sec{
+   text-align: start;
+}
+
+ul>li{
+    text-align: initial;
+    padding-inline-start: 30px;
+    height: 50px;
+    font-size: 18px;
 }

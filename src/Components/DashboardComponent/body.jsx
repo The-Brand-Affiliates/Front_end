@@ -34,7 +34,7 @@ function Body(){
            <div className="col card1 navbar">
                <div className="num">
                    <p>Acos</p>
-                   <h2>{Stat.acos}</h2>
+                   <h2>{Stat.acos} %</h2>
                </div>
                <div className="logoC">
                    <img src={slice3} alt="6" />

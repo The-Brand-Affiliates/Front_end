@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 // import axios from 'axios';
 
 
+
 function Body(){
 
   const [Details, setDetails] = useState(data);
@@ -53,7 +54,7 @@ function Body(){
       <div className="filter">
       </div>
          <tr>
-            <th className="col" > <input type="checkbox" /> </th>
+            
             <th scope="col" className='initial' >Product</th>
             <th scope="col"> 
             <select className='status' name="Status" id="s" >
@@ -77,7 +78,7 @@ function Body(){
     {Details.map((Detail) => (
       
       <tr>
-      <td > <input type="checkbox"/></td>
+      
       <th scope="row" className='initial'><Link className='productName' to={Detail.product_link}>{Detail.name}</Link></th>
       <td > <div className="tr-ele">{Detail.status} </div> </td>
       <td ><div className="tr-ele"> {Detail['expiry_date']} </div> </td>
@@ -86,7 +87,7 @@ function Body(){
       <td ><div className="tr-ele"> {Detail.acos} </div> </td>
       <td ><div className="tr-ele">{Detail['spend']} </div> </td>
       <td ><div className="tr-ele">  {Detail.sales} </div></td>
-      <td ><div className="tr-ele"> <Link to="" onClick={toggle}>edit</Link></div> </td>
+      <td ><div className="tr-ele"> <button className='editb'> <Link to="" onClick={toggle} className = 'editb2'>Edit</Link> </button></div> </td>
     </tr>
     ))}
 

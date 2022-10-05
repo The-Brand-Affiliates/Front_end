@@ -44,7 +44,8 @@ function Contactus(){
                 
                 <div className="mail d-flex m-2">
                     <img src={msgp} alt=""/>
-                    <p className="con ps-5">Thebrandaffiliate@luenze.com</p>
+                    <p className="con ps-5">l
+                    luenze.in@gmail.com</p>
                 </div>
             </div>
          </nav>

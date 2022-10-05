@@ -19,7 +19,7 @@ function nav(){
           <Link to='/contact'  className='nav-link me-3 ms-4'>About us</Link>
           </div>   
           
-        </div>
+        </div> 
       </nav>
     </>
 
