@@ -9,15 +9,34 @@ import slice2 from '../../img/Slice 2.svg'
 import slice1 from '../../img/Slice 1.svg'
 import stats from '../../Brand_statics.json'
 import Pop from './Popup'
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 
 
 function Body(){
 
-    const [Statics, setStatics] = useState(stats);
+    const [ Stat, setStats] = useState([]);
 
-    return <>
-    {Statics.map((Stat) => (
+    useEffect( () => {
+        var requestOptions = {
+          method: 'GET',
+          redirect: 'follow'
+        };
+        
+        fetch("https://thebrandaffiliates.herokuapp.com/brands/statistics/?auth_token=cec51945-c9db-4a65-9cf5-a6b09003f87c", requestOptions)
+          .then(response => response.json()).then(json => {
+            console.log("jonsn", json)
+            setStats(json)
+          })
+          .then(result => console.log(result))
+          .catch(error => console.log('error', error));
+      }
+      ,[]
+      )
+
+
+    return (
+    <>
+    {/* {Statistics.map((Stat) => ( */}
         <div className="container" id='blur1'>
         <div className="row row-cols-md-2 g-2 stamps">
 
@@ -85,11 +104,11 @@ function Body(){
        </div>
 
    </div>
-    ))}
+    {/* ))} */}
     
     <Pop></Pop>
     </>
-    
+    )
 }
 
 export default Body;

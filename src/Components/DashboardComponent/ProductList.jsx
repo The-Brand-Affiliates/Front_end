@@ -4,7 +4,7 @@ import "./body.css"
 import data from '../../temp_data.json';
 // import data from 'https://jsonplaceholder.typicode.com/posts'
 import { useState } from 'react';
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 // import axios from 'axios';
 
@@ -12,24 +12,24 @@ import { Link } from 'react-router-dom';
 
 function Body(){
 
-  const [Details, setDetails] = useState(data);
+  // const [Details, setDetails] = useState(data);
   
-  // const [Details, setDetails] = useState([]);
-  // useEffect( () => {
-  //   var requestOptions = {
-  //     method: 'GET',
-  //     redirect: 'follow'
-  //   };
+  const [Details, setDetails] = useState([]);
+  useEffect( () => {
+    var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
     
-  //   fetch("http://172.17.43.46:8000/brands/products/?auth_token=755e22bd-1aa0-48fa-a6e8-c7db3911be5e&format=json", requestOptions)
-  //     .then(response => response.json()).then(json => {
-  //       console.log("jonsn", json)
-  //       setDetails(json)
-  //     })
-  //     .then(result => console.log(result))
-  //     .catch(error => console.log('error', error));
-  // }
-  // )
+    fetch("https://thebrandaffiliates.herokuapp.com/brands/products/?auth_token=cec51945-c9db-4a65-9cf5-a6b09003f87c", requestOptions)
+      .then(response => response.json()).then(json => {
+        console.log("jonsn", json)
+        setDetails(json)
+      })
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
+  },[]
+  )
 
   function toggle(){
     var blur = document.getElementById('blur');
