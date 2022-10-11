@@ -16,13 +16,21 @@ function Body(){
 
     const [ Stat, setStats] = useState([]);
 
+    function getCurrentUrl(){
+        return window.location.href; 
+      }
+      
+    const url_string = getCurrentUrl();
+    var url = new URL(url_string);
+    var brand_auth_token = url.searchParams.get("auth_token");
+
     useEffect( () => {
         var requestOptions = {
           method: 'GET',
           redirect: 'follow'
         };
         
-        fetch("https://thebrandaffiliates.herokuapp.com/brands/statistics/?auth_token=cec51945-c9db-4a65-9cf5-a6b09003f87c", requestOptions)
+        fetch("https://thebrandaffiliates.herokuapp.com/brands/statistics/?auth_token="+brand_auth_token, requestOptions)
           .then(response => response.json()).then(json => {
             console.log("jonsn", json)
             setStats(json)

@@ -13,7 +13,16 @@ import { Link } from 'react-router-dom';
 function Body(){
 
   // const [Details, setDetails] = useState(data);
+  function getCurrentUrl(){
+    return window.location.href;
+    
+  }
   
+  const url_string = getCurrentUrl();
+  var url = new URL(url_string);
+  var brand_auth_token = url.searchParams.get("auth_token");
+  
+
   const [Details, setDetails] = useState([]);
   useEffect( () => {
     var requestOptions = {
@@ -21,10 +30,11 @@ function Body(){
       redirect: 'follow'
     };
     
-    fetch("https://thebrandaffiliates.herokuapp.com/brands/products/?auth_token=cec51945-c9db-4a65-9cf5-a6b09003f87c", requestOptions)
+    fetch("https://thebrandaffiliates.herokuapp.com/brands/products/?auth_token="+ brand_auth_token, requestOptions)
       .then(response => response.json()).then(json => {
         console.log("jonsn", json)
         setDetails(json)
+        console.log(brand_auth_token);
       })
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
