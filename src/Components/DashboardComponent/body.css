@@ -72,10 +72,22 @@ tr,th,td {
 }
 
 .status{
-    width: 120px;
+    width: 150px;
     border-radius: 5px;
-    padding: 2px;  
+    padding: 3px;
+    padding-right: 8px;
+    /* height: 60px;   */
+    border: 0;
+
 }
+
+select>option{ 
+    height:20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 20px;
+    font-weight: 500;
+    color: #3C537E;
+  }
 
 
 .productName{
@@ -130,23 +142,31 @@ li:hover{
     margin-TOP: 50PX;
     border: solid;
 }
-
+.logoC{
+    height: 75%;
+    margin-bottom: 2px;
+    margin-right: 7px;
+}
+.rupee{
+    height: 28%;
+    margin-bottom: 5%;
+}
 .list{
     text-align: center;
     padding: 0;
     margin-top: 0px;
   
 }
-.editb{
+/* .editb{
     text-decoration: none;
     border: 0;
     padding-inline: 10px;
     background-color: #4793EC;
     border-radius: 4px;
     width: 100px;
-}
+} */
 .editb2{
-    color: #EBEBEB;
+    color: rgba(100, 162, 255, 1);
     text-decoration: none;
     font-size: 15px;
 }
@@ -179,6 +199,7 @@ li:hover{
 .num{
     margin-top: 0px;
     margin-left: 0px;
+    align-items: center;
 }
 
 

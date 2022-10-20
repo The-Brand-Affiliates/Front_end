@@ -15,7 +15,8 @@ function App(){
             <Navbar/>
             <Routes>
                 <Route path ="/" element = {<Dashboard/>}/>
-                <Route path ="/profile" element = {<><Profile/> <Basicdetails/></>}> </Route>
+                <Route path ="/profile/" element = {<><Profile/> <Basicdetails/></>}> </Route>
+                {/* <Route path ={"/profile/?auth_token= " + localStorage.getItem('auth_token')}  element = {<><Profile/> <Basicdetails/></>}> </Route> */}
                 <Route path ="/profile/wallet" element = {<><Profile/> <Wallet/></>}/>
                 <Route path ="/profile/Thistory" element = {<><Profile/> <Transaction/></>}/>
                 <Route path ="/profile/Bankdetail" element = {<><Profile/> <Bank/></>}/>

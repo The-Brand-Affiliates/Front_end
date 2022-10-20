@@ -14,9 +14,10 @@ function nav(){
             <p className="d-inline m-2">The Brand affiliate</p>
           </Link>
          <div className="container-right d-flex">
-          <Link to="/"  className='nav-link me-3 ms-4'>Dashboard</Link>
-          <Link to="/profile" className='nav-link me-3 ms-4' >Profile</Link>
-          <Link to='/contact'  className='nav-link me-3 ms-4'>About us</Link>
+          <Link to={"/?auth_token=" + localStorage.getItem('auth_token')}  className='nav-link me-3 ms-4'>Dashboard</Link>
+          {/* <Link to="/profile/?auth_token=" className='nav-link me-3 ms-4' >Profile</Link> */}
+          <Link to={"/profile/?auth_token=" + localStorage.getItem('auth_token')}  className='nav-link me-3 ms-4' >Profile</Link>
+          <Link to={'/contact/?auth_token='+ localStorage.getItem('auth_token')}   className='nav-link me-3 ms-4'>About us</Link>
           </div>   
           
         </div> 

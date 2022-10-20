@@ -21,25 +21,49 @@ function Body(){
   const url_string = getCurrentUrl();
   var url = new URL(url_string);
   var brand_auth_token = url.searchParams.get("auth_token");
-  
+
+  if(brand_auth_token == null){
+    
+    
+  }else {
+
+    const auth_token = localStorage.setItem('auth_token', brand_auth_token);
+  }
 
   const [Details, setDetails] = useState([]);
+
+  
   useEffect( () => {
     var requestOptions = {
       method: 'GET',
       redirect: 'follow'
     };
+
     
-    fetch("https://thebrandaffiliates.herokuapp.com/brands/products/?auth_token="+ brand_auth_token, requestOptions)
+    
+    fetch("https://thebrandaffiliates.herokuapp.com/brands/products/?auth_token="+ localStorage.getItem('auth_token'), requestOptions)
       .then(response => response.json()).then(json => {
         console.log("jonsn", json)
-        setDetails(json)
+        if(statusvalue == "All"){
+          setDetails(json);
+        }else{
+          // setDetails(json);
+          let filters = json.filter(json => json.status == statusvalue)
+          setDetails(filters);
+        }
+    
+        
         console.log(brand_auth_token);
       })
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
   },[]
   )
+
+
+
+  console.log(localStorage.getItem('auth_token'));
+
 
   function toggle(){
     var blur = document.getElementById('blur');
@@ -50,6 +74,21 @@ function Body(){
     popup.classList.toggle('active')
   }
 
+
+  //usestate for filter
+  const [statusvalue, setstatusvalue] = useState('All')
+
+  //filter value selected
+  function filtervalueselected(filtervalue){
+    console.log(filtervalue);
+    setstatusvalue(filtervalue);
+  }
+
+  function statuschanged(event){
+    // console.log(event.target.value);
+    // onchangefetch();
+    filtervalueselected(event.target.value);
+  }
 
     return <>
 
@@ -67,10 +106,11 @@ function Body(){
             
             <th scope="col" className='initial' >Product</th>
             <th scope="col"> 
-            <select className='status' name="Status" id="s" >
-              <option value="1">Status: &ensp;all</option>
-              <option value="2">Active</option>
-              <option value="3">expired</option>
+            <select className='status' name="Status" id="s" onChange={statuschanged} >
+              <option value="All" className='statusOpt'>Status: &ensp;All</option>
+              <option value="Active" className='statusOpt'>Active</option>
+              <option value="About to expire" className='statusOpt'>About to Expire</option>
+              <option value="notactive" className='statusOpt'>No active offer</option>
             </select>
             </th>
             <th scope="col" > <div className="t-ele">Offer Expiry </div> </th>
@@ -89,7 +129,7 @@ function Body(){
       
       <tr>
       
-      <th scope="row" className='initial'><Link className='productName' to={Detail.product_link}>{Detail.name}</Link></th>
+      <th scope="row" className='initial'><a className='productName' href={Detail.product_link} target = "_blank">{Detail.name}</a></th>
       <td > <div className="tr-ele">{Detail.status} </div> </td>
       <td ><div className="tr-ele"> {Detail['expiry_date']} </div> </td>
       <td ><div className="tr-ele">  {Detail.commission}% </div> </td>
@@ -97,7 +137,7 @@ function Body(){
       <td ><div className="tr-ele"> {Detail.acos} </div> </td>
       <td ><div className="tr-ele">{Detail['spend']} </div> </td>
       <td ><div className="tr-ele">  {Detail.sales} </div></td>
-      <td ><div className="tr-ele"> <button className='editb'> <Link to="" onClick={toggle} className = 'editb2'>Edit</Link> </button></div> </td>
+      <td ><div className="tr-ele"> <Link to="" onClick={toggle} className = 'editb2'>Edit</Link></div> </td>
     </tr>
     ))}
 
