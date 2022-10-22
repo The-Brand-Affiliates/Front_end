@@ -14,7 +14,7 @@ function Contactus(){
 
           <nav className='sidebar1 p-auto'>
             <div className="list">
-                <h3>Our Story</h3> 
+                <h3 className="About">About <b>us</b></h3> 
                 <Link to ="/" className="hello" >
                     <img src={logo} alt="profile" className='rounded-circle img logo'/>
                 </Link>
@@ -23,10 +23,13 @@ function Contactus(){
 
             <div className="about-Me">
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus minima veniam velit totam corrupti ratione, incidunt necessitatibus sed debitis quisquam, quae ipsa. Architecto iusto dolore, fugiat excepturi rem, beatae repellendus asperiores officiis vero neque repudiandae animi perspiciatis quis hic laboriosam qui numquam consectetur ullam assumenda temporibus. Aliquid, quis consectetur. Repudiandae odit illo dolores nihil consequuntur, nobis dolore tempora praesentium exercitationem incidunt voluptas mollitia deserunt? Accusantium?
+                    At Luenze , we are on a mission to disrupt the influencer marketing industry
+                </p>
+                <p> Luenze is a great alternative to traditional influencer marketing for brands since it virtually eliminates all the unnecessary hassles of getting an influencer on board. Simply install our plugin on your Shopify store , set the commission on products you want to be promoted, and that's about it!
+                    Sit back and relax while our influencers generate sales for your products.
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, quis magni nesciunt odio ex nobis beatae eos sunt quaerat explicabo magnam minima veritatis. Fugiat voluptate autem excepturi, ullam praesentium nisi?
+                Join us, and help us bring about the change we wish to see. 
                 </p>
             </div>
 

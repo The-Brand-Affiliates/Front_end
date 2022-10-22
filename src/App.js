@@ -8,6 +8,7 @@ import Basicdetails from './Components/ProfileComponent/Basicdetails'
 import Wallet from './Components/ProfileComponent/Wallet'
 import Transaction from './Components/ProfileComponent/Transactions'
 import Bank from './Components/ProfileComponent/Bank'
+import Pdetail from './Components/ProfileComponent/Pdetails.jsx';
 
 function App(){
     return (
@@ -15,7 +16,7 @@ function App(){
             <Navbar/>
             <Routes>
                 <Route path ="/" element = {<Dashboard/>}/>
-                <Route path ="/profile/" element = {<><Profile/> <Basicdetails/></>}> </Route>
+                <Route path ="/profile/" element = {<><Profile/><Pdetail/></>}> </Route>
                 {/* <Route path ={"/profile/?auth_token= " + localStorage.getItem('auth_token')}  element = {<><Profile/> <Basicdetails/></>}> </Route> */}
                 <Route path ="/profile/wallet" element = {<><Profile/> <Wallet/></>}/>
                 <Route path ="/profile/Thistory" element = {<><Profile/> <Transaction/></>}/>

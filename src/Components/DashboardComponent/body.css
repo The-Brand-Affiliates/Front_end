@@ -209,7 +209,7 @@ li:hover{
 /* popup-css */
 
 .pop{
-    min-width: 650px;
+    min-width: 750px;
     min-height: 400px;
     width: 50%;
     background-color: #FFFFFF;
@@ -221,7 +221,7 @@ li:hover{
     visibility: hidden;
     opacity: 0;
     transition: 0.8s;
-    box-shadow: 0.5px 0.5px 3px 3px rgba(83, 82, 82, 0.044);
+    box-shadow: 10px 10px 10px 10px rgba(45, 45, 45, 0.044);
     padding: 15px;
     padding-inline: 3%;
     border-radius: 5px;
@@ -235,19 +235,31 @@ li:hover{
 }
 
 .font-s{
+    font-size: 17px;
+}
+.font-title{
+    font-size: 22px;
+    color: rgba(51, 51, 51, 1);
+    text-align: center;
+}
+.product{
     font-size: 22px;
 }
 
 .font-d{
-    font-size: 18px;
+    font-size: 15px;
     max-width: 70%;
     color: #3C537E;
+}
+.pdiv{
+    margin-bottom: 5%;
 }
 
 .sav{
     background-color: #119070;
-    margin-inline-start: 15px;
+    margin-inline-start: 8px;
     min-width: 50px;
+    border: 0;
     border-radius: 5px;
     color: #FFFFFF;
     width: 60px;
@@ -255,11 +267,12 @@ li:hover{
 }
 
 .datebar{
-    min-width: 190px;
-    width: 68%;
+    min-width: 200px;
+    width: 100%;
     padding: 3px;
     padding-inline-start: 15px;
     border-radius: 5px;
+    border: 0;
     background-color: #DEDEDE;
     color: #3C537E;
 }
@@ -272,9 +285,14 @@ li:hover{
     min-width: 190px;
     width: 33%;
     border-radius: 5px;
+    border: 0;
     background-color: #4793EC;
     color: #FFFFFF;
     height: 30px;
+}
+.note{
+    max-width: 200px;
+    margin-top: 5px;
 }
 
 .tittle{
@@ -282,11 +300,12 @@ li:hover{
     font-weight: bold;
 }
 .productImg{
-    float: right;
-    margin-top: -64px;
+    /* float: right; */
+    /* margin-top: -64px; */
+    height: 119px;
 }
 .Pimg{
-    height: 160px;
+    height: 100%;
 }
 
 

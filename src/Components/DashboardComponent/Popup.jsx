@@ -44,23 +44,40 @@ function Popup(){
 
         <div className='pop' id="popup">
         <div className="tittle">
-            <p className="font-s">Edit Details</p>
+            <p className="font-title">Edit Details</p>
         </div>
-        <p className="font-s">Product</p>
-        <div className="productImg">
-            <img className="Pimg" src={image} alt="product Image" />
+        
+        <div className="d-flex pdiv">
+            <div className="productImg">
+                <img className="Pimg me-3" src={image} alt="product Image" />
+            </div>
+            <div className="pdetail ms-5">
+                <p className="product">Product</p>
+                <p className="font-d">{Detail.name}</p>
+            </div>
+
         </div>
-        <p className="font-d">{Detail.name}</p>
+
         <div className="dc d-flex navbar">
             <div className="end">
                 <p className="font-s">Offer Ends on</p>
-                <input className ="datebar" id='myid' type="date" />
-                <button className="sav" onClick={myfunction}>save</button>
+                <div className="d-flex">
+                    <div className="dn">
+                        <input className ="datebar" id='myid' type="date" />
+                        <p className="note">Note : Changes made will be reflected after 48 hours</p>
+                    </div>
+                    <button className="sav" onClick={myfunction}>Save</button>
+                </div>
             </div>
             <div className="commision">
                 <p className="font-s">Commission (%)</p>
-                <input className="datebar" type="number" />
-                <button className="sav" >save</button>
+                <div className="d-flex">
+                    <div className="dn">
+                        <input className="datebar p-1" type="number" />
+                        <p className="note">Note : Changes made will be reflected after 48 hours</p>
+                    </div>
+                    <button className="sav">Save</button>
+                </div>
             </div>
         </div>
         

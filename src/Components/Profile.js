@@ -8,7 +8,7 @@ import Sidebar from './ProfileComponent/sidebar';
 function Profile(){
 
     return <>
-    <Sidebar></Sidebar>
+    {/* <Sidebar></Sidebar> */}
 </>
     
 }

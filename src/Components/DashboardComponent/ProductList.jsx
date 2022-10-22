@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 function Body(){
 
   // const [Details, setDetails] = useState(data);
+
   function getCurrentUrl(){
     return window.location.href;
     
