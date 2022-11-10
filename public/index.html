@@ -11,7 +11,32 @@
       content="Web site created using create-react-app"
     />
     <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+    <!-- <link
+    rel="stylesheet"
+    href="https://unpkg.com/@shopify/polaris@4.22.0/styles.min.css"
+    /> -->
     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <script src="https://unpkg.com/@shopify/app-bridge"></script>
+    
+   
+    <!-- <script>
+          // Put the app API token in the window so that you can use it to make authenticated requests to the Flask backend.
+          window.authToken = "{{ auth_token }}";
+          window.backend = "{{ backend }}";
+          var AppBridge = window['app-bridge'];
+          var Actions = window['app-bridge'].actions;
+          var Redirect = Actions.Redirect;
+
+          var createApp = AppBridge.default;
+          var apiKey = "{{ shopify_api_key }}";
+          var app = createApp({
+              apiKey: apiKey,
+              shopOrigin: "{{ shop }}"
+          });
+      </script> -->
+
     <link rel="apple-touch-icon" href="./logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a

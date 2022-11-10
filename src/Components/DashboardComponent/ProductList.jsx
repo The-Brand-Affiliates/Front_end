@@ -1,5 +1,5 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 import "./body.css"
 import data from '../../temp_data.json';
 // import data from 'https://jsonplaceholder.typicode.com/posts'
@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 // import axios from 'axios';
+import Pop from './Popup'
 
 
 
@@ -16,18 +17,14 @@ function Body(){
 
   function getCurrentUrl(){
     return window.location.href;
-    
   }
   
   const url_string = getCurrentUrl();
   var url = new URL(url_string);
   var brand_auth_token = url.searchParams.get("auth_token");
-
-  if(brand_auth_token == null){
-    
-    
+  
+  if(brand_auth_token == null){ 
   }else {
-
     const auth_token = localStorage.setItem('auth_token', brand_auth_token);
   }
 
@@ -45,16 +42,15 @@ function Body(){
     fetch("https://thebrandaffiliates.herokuapp.com/brands/products/?auth_token="+ localStorage.getItem('auth_token'), requestOptions)
       .then(response => response.json()).then(json => {
         console.log("jonsn", json)
-        if(statusvalue == "All"){
-          setDetails(json);
-        }else{
-          // setDetails(json);
-          let filters = json.filter(json => json.status == statusvalue)
-          setDetails(filters);
-        }
-    
-        
-        console.log(brand_auth_token);
+        setDetails(json)
+        // if(statusvalue == "All"){
+        //   setDetails(json);
+        // }else{
+        //   // setDetails(json);
+        //   let filters = json.filter(json => json.status == statusvalue)
+        //   setDetails(filters);
+        // }
+        // console.log(brand_auth_token);
       })
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
@@ -66,7 +62,12 @@ function Body(){
   console.log(localStorage.getItem('auth_token'));
 
 
+  function printlog(){
+    console.log("hello")
+  }
+
   function toggle(){
+    
     var blur = document.getElementById('blur');
     blur.classList.toggle('active')
     var blur1 = document.getElementById('blur1');
@@ -76,20 +77,20 @@ function Body(){
   }
 
 
-  //usestate for filter
-  const [statusvalue, setstatusvalue] = useState('All')
+  // // //usestate for filter
+  // const [statusvalue, setstatusvalue] = useState('All')
 
-  //filter value selected
-  function filtervalueselected(filtervalue){
-    console.log(filtervalue);
-    setstatusvalue(filtervalue);
-  }
+  // // //filter value selected
+  // function filtervalueselected(filtervalue){
+  //   console.log(filtervalue);
+  //   setstatusvalue(filtervalue);
+  // // }
 
-  function statuschanged(event){
-    // console.log(event.target.value);
-    // onchangefetch();
-    filtervalueselected(event.target.value);
-  }
+  // function statuschanged(event){
+  //   // console.log(event.target.value);
+  //   // onchangefetch();
+  //   filtervalueselected(event.target.value);
+  // }
 
     return <>
 
@@ -107,7 +108,8 @@ function Body(){
             
             <th scope="col" className='initial' >Product</th>
             <th scope="col"> 
-            <select className='status' name="Status" id="s" onChange={statuschanged} >
+            {/* <select className='status' name="Status" id="s" onChange={statuschanged} > */}
+            <select className='status' name="Status" id="s">
               <option value="All" className='statusOpt'>Status: &ensp;All</option>
               <option value="Active" className='statusOpt'>Active</option>
               <option value="About to expire" className='statusOpt'>About to Expire</option>
@@ -127,7 +129,7 @@ function Body(){
   <tbody className='table-borderless'>
     
     {Details.map((Detail) => (
-      
+      <>
       <tr>
       
       <th scope="row" className='initial'><a className='productName' href={Detail.product_link} target = "_blank">{Detail.name}</a></th>
@@ -138,8 +140,9 @@ function Body(){
       <td ><div className="tr-ele"> {Detail.acos} </div> </td>
       <td ><div className="tr-ele">{Detail['spend']} </div> </td>
       <td ><div className="tr-ele">  {Detail.sales} </div></td>
-      <td ><div className="tr-ele"> <Link to="" onClick={toggle} className = 'editb2'>Edit</Link></div> </td>
+      <td ><div className="tr-ele"> <Link  onClick = {toggle} className = 'editb2'>Edit</Link></div> </td>
     </tr>
+    </>
     ))}
 
   </tbody> 
@@ -150,5 +153,6 @@ function Body(){
     </>
     
 }
+
 
 export default Body;

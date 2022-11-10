@@ -1,7 +1,7 @@
 import React from "react";
 import './body.css';
 import data from '../../temp_data.json';
-import { useState } from "react";
+import { useState , useEffect } from "react";
 import image from '../../img/productimg.png';
 
 function Popup(){
@@ -16,33 +16,34 @@ function Popup(){
 
       const [Details, setDetails] = useState(data);
   
-      // const [Details, setDetails] = useState([]);
-      // useEffect( () => {
-      //   var requestOptions = {
-      //     method: 'GET',
-      //     redirect: 'follow'
-      //   };
+    //   const [Details, setDetails] = useState([]);
+    //   useEffect( () => {
+    //     var requestOptions = {
+    //       method: 'GET',
+    //       redirect: 'follow'
+    //     };
         
-      //   fetch("http://172.17.43.46:8000/brands/products/?auth_token=755e22bd-1aa0-48fa-a6e8-c7db3911be5e&format=json", requestOptions)
-      //     .then(response => response.json()).then(json => {
-      //       console.log("jonnsn", json)
-      //       setDetails(json)
-      //     })
-      //     .then(result => console.log(result))
-      //     .catch(error => console.log('error', error));
-      // }
-      // )
+    //     fetch("http://172.17.43.46:8000/brands/products/?auth_token=755e22bd-1aa0-48fa-a6e8-c7db3911be5e&format=json", requestOptions)
+    //       .then(response => response.json()).then(json => {
+    //         console.log("jonnsn", json)
+    //         setDetails(json)
+    //       })
+    //       .then(result => console.log(result))
+    //       .catch(error => console.log('error', error));
+    //   },[]
+    //   )
 
       function myfunction() {
         var date;
           date = document.getElementById("myid").value;
           console.log(date);
         }
+
     return(
         <>
-        {Details.map((Detail)=>(
-
-        <div className='pop' id="popup">
+        {Details.map((Detail, ind)=>(
+            
+        <div className='pop' id="popup" key={ind}>
         <div className="tittle">
             <p className="font-title">Edit Details</p>
         </div>
@@ -53,7 +54,8 @@ function Popup(){
             </div>
             <div className="pdetail ms-5">
                 <p className="product">Product</p>
-                <p className="font-d">{Detail.name}</p>
+                <p className="font-d">{Detail.ind}</p>
+                
             </div>
 
         </div>
