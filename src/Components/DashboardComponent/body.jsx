@@ -116,7 +116,6 @@ function Body(){
    </div>
     {/* ))} */}
     
-    <Pop></Pop>
     </>
     )
 }

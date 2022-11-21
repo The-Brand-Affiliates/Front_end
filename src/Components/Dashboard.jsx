@@ -5,7 +5,7 @@ function Dashboard(){
     return(
         <>
         <Body></Body>
-        <ProductList></ProductList>
+        <ProductList/>
         </>
     )
 }
