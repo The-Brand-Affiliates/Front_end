@@ -42,4 +42,9 @@
 
 .logo1{
     background-color: black;
+    width: 169px;
+    height: 169px;
+    margin-bottom: 50px;
+    margin-TOP: 30PX;
+    border: solid;
 }
