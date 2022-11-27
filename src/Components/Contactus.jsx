@@ -48,7 +48,7 @@ function Contactus(){
           <nav className='sidebar1 p-auto'>
             <div className="list">
                 <h3 className="About">About <b>us</b></h3> 
-                <Link to ="/" className="hello" >
+                <Link to ="/" className="hello" > 
                     <img src={logo} alt="profile" className='rounded-circle img logo1'/>
                 </Link>
             </div>

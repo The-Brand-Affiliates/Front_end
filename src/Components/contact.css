@@ -48,3 +48,13 @@
     margin-TOP: 30PX;
     border: solid;
 }
+
+.nav-log{
+    height: 35px;
+    width: 35px;
+    
+}
+
+.navbar-brand{
+    align-items: baseline;
+}
