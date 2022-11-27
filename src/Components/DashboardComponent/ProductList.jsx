@@ -171,7 +171,7 @@ function Body() {
                         <div className="tr-ele"> {Detail.orders} </div>{" "}
                       </td>
                       <td>
-                        <div className="tr-ele"> {Detail.acos} </div>{" "}
+                        <div className="tr-ele"> {Detail.acos}% </div>{" "}
                       </td>
                       <td>
                         <div className="tr-ele">{Detail["spend"]} </div>{" "}

@@ -11,7 +11,7 @@ function nav(){
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             <img src={logo} alt="" width="30" height="30" className="d-inline-block align-text-top"/> 
-            <p className="d-inline m-2">The Brand affiliate</p>
+            <p className="d-inline m-2">Luenze</p>
           </Link>
          <div className="container-right d-flex">
           <Link to={"/?auth_token=" + localStorage.getItem('auth_token')}  className='nav-link me-3 ms-4'>Dashboard</Link>

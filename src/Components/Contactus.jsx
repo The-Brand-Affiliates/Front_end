@@ -5,8 +5,41 @@ import msgp from '../img/msgp.svg'
 import callp from '../img/callp.svg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
+
 
 function Contactus(){
+
+    const [Details, setDetails] = useState([]);
+
+    useEffect(() => {
+        var requestOptions = {
+          method: "GET",
+          redirect: "follow",
+        };
+    
+        fetch(
+          "https://thebrandaffiliates.herokuapp.com/brands/products/?auth_token=" +
+            localStorage.getItem("auth_token"),
+          requestOptions
+        )
+          .then((response) => response.json())
+          .then((json) => {
+            console.log("jonsn", json);
+            setDetails(json);
+            // if(statusvalue == "All"){
+            //   setDetails(json);
+            // }else{
+            //   // setDetails(json);
+            //   let filters = json.filter(json => json.status == statusvalue)
+            //   setDetails(filters);
+            // }
+            // console.log(brand_auth_token);
+          })
+          .then((result) => console.log(result))
+          .catch((error) => console.log("error", error));
+      }, []);
+
 
     return(
         <>
@@ -16,7 +49,7 @@ function Contactus(){
             <div className="list">
                 <h3 className="About">About <b>us</b></h3> 
                 <Link to ="/" className="hello" >
-                    <img src={logo} alt="profile" className='rounded-circle img logo'/>
+                    <img src={logo} alt="profile" className='rounded-circle img logo1'/>
                 </Link>
             </div>
             </nav>
@@ -42,7 +75,7 @@ function Contactus(){
             <div className="info">
                 <div className="phone d-flex">
                     <img className="ms-2" src={callp} alt=""/>
-                    <p className="con ps-5">+91 7024XXXXXX </p>
+                    <p className="con ps-5">+91 9799813598</p>
                 </div>
                 
                 <div className="mail d-flex m-2">
