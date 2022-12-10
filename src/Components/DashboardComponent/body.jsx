@@ -32,7 +32,7 @@ function Body(){
           redirect: 'follow'
         };
         
-        fetch("https://thebrandaffiliates.herokuapp.com/brands/statistics/?auth_token="+ localStorage.getItem('auth_token'), requestOptions)
+        fetch("https://www.luenze.in/back/brands/statistics/?auth_token="+ localStorage.getItem('auth_token'), requestOptions)
           .then(response => response.json()).then(json => {
             console.log("jonsn", json)
             setStats(json)

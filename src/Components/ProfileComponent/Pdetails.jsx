@@ -27,7 +27,7 @@ function Pdetail() {
     };
 
     fetch(
-      "https://thebrandaffiliates.herokuapp.com/brands/profile/?auth_token=" +
+      "https://www.luenze.in/back/brands/profile/?auth_token=" +
         localStorage.getItem("auth_token"),
       requestOptions
     )

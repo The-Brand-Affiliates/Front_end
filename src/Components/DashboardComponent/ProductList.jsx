@@ -35,7 +35,7 @@ function Body() {
     };
 
     fetch(
-      "https://thebrandaffiliates.herokuapp.com/brands/products/?auth_token=" +
+      "https://www.luenze.in/back/brands/products/?auth_token=" +
         localStorage.getItem("auth_token"),
       requestOptions
     )
